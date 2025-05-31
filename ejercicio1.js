@@ -9,10 +9,15 @@ const characters = [
   { name: 'Yoda', species: 'Unknown' },
   { name: 'Han Solo', species: 'Human' }
 ]
-const humanCharacters = []
-for (const character of characters) {
-  if (character['species'] === 'Human') {
-    humanCharacters.push(character['name'])
+function starsWarsHumans(charactersList) {
+  const humanCharacters = []
+  for (const character of charactersList) {
+    if (character['species'] === 'Human') {
+      humanCharacters.push(character['name'])
+    }
   }
+  return console.log(
+    'Estos son los personajes de Star Wars humanos: ' + humanCharacters
+  )
 }
-console.log('Estos son los personajes de Star Wars humanos: ' + humanCharacters)
+starsWarsHumans(characters)

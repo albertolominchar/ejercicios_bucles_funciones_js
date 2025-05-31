@@ -10,14 +10,16 @@ const cartoons = [
   { name: 'Pokémon', debut: 1997 },
   { name: "Dexter's Laboratory", debut: 1996 }
 ]
-
-let iniCartoon = cartoons[0]
-let oldDate = iniCartoon['debut']
-let oldSerie = iniCartoon['name']
-for (const cartoon of cartoons) {
-  if (cartoon['debut'] < oldDate) {
-    oldDate = cartoon['debut']
-    oldSerie = cartoon['name']
+function oldestCartoon(cartoonSeries) {
+  let iniCartoon = cartoonSeries[0]
+  let oldDate = iniCartoon['debut']
+  let oldSerie = iniCartoon['name']
+  for (const cartoon of cartoonSeries) {
+    if (cartoon['debut'] < oldDate) {
+      oldDate = cartoon['debut']
+      oldSerie = cartoon['name']
+    }
   }
+  return console.log('La serie de dibujos mas antigüa es: ' + oldSerie)
 }
-console.log('La serie de dibujos mas antigüa es: ' + oldSerie)
+oldestCartoon(cartoons)

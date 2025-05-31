@@ -10,15 +10,18 @@ const movies = [
   { title: 'Fight Club', releaseYear: 1999 },
   { title: 'Forrest Gump', releaseYear: 1994 }
 ]
-
-let bef2000 = 0
-let aft2000 = 0
-for (const movie of movies) {
-  if (movie['releaseYear'] < 2000) {
-    bef2000++
-  } else {
-    aft2000++
+function beforeAfter2000movies(moviesList) {
+  let bef2000 = 0
+  let aft2000 = 0
+  for (const movie of moviesList) {
+    if (movie['releaseYear'] < 2000) {
+      bef2000++
+    } else {
+      aft2000++
+    }
   }
+  console.log('Peliculas que son de antes del año 2000: ' + bef2000)
+  console.log('Peliculas que son de después del año 2000: ' + aft2000)
+  return
 }
-console.log('Peliculas que son de antes del año 2000: ' + bef2000)
-console.log('Peliculas que son de después del año 2000: ' + aft2000)
+beforeAfter2000movies(movies)

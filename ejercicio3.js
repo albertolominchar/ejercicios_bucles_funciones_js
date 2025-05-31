@@ -11,11 +11,13 @@ const songs = [
   { title: 'Thunderstruck', genre: 'Rock', duration: 4.52 },
   { title: 'Crazy Love', genre: 'Pop', duration: 3.52 }
 ]
-const rockPlaylist = []
-
-for (const song of songs) {
-  if (song['genre'] == 'Rock' && song['duration'] > 5.0) {
-    rockPlaylist.push(song['title'])
+function rockLongSongs(songsList) {
+  const rockPlaylist = []
+  for (const song of songsList) {
+    if (song['genre'] == 'Rock' && song['duration'] > 5.0) {
+      rockPlaylist.push(song['title'])
+    }
   }
+  return console.log(rockPlaylist)
 }
-console.log(rockPlaylist)
+rockLongSongs(songs)

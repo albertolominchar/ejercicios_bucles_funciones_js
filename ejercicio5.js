@@ -10,11 +10,15 @@ const albums = [
   { title: 'Born to Run', genre: 'Rock', duration: 39.26 },
   { title: 'The Joshua Tree', genre: 'Rock', duration: 50.11 }
 ]
-
-let sumRockAlbum = 0
-for (const album of albums) {
-  if (album['genre'] === 'Rock') {
-    sumRockAlbum += album['duration']
+function duracionRockAlbums(albumsList) {
+  let sumRockAlbum = 0
+  for (const album of albumsList) {
+    if (album['genre'] === 'Rock') {
+      sumRockAlbum += album['duration']
+    }
   }
+  return console.log(
+    'La duración total de los álbumes de rock es de: ' + sumRockAlbum
+  )
 }
-console.log('La duración total de los álbumes de rock es de: ' + sumRockAlbum)
+duracionRockAlbums(albums)
